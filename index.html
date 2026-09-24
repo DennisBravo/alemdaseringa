@@ -77,7 +77,9 @@ a{color:inherit}
 .fatos li{display:flex;align-items:center;gap:.55rem}
 .fatos svg{width:18px;height:18px;flex:none;stroke:var(--caramelo);fill:none;stroke-width:1.4}
 .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-top:2rem}
-.hero-cta .cert{font-size:.92rem;color:var(--marfim-2)}
+.hero-cta .cert{font-size:.92rem;color:var(--marfim-2);display:inline-flex;flex-direction:column;align-items:center;text-align:center;line-height:1.35}
+.hero-cta .cert small{font-size:.82em;color:var(--caramelo-claro);margin-top:.2em}
+.detalhes .obs{font-size:.9rem;color:var(--caramelo-claro)}
 
 
 /* Entrada */
@@ -119,11 +121,21 @@ a{color:inherit}
   .fatos-lado{display:none}
   .btn-grande{width:100%;padding:1rem 1.1rem;font-size:1.12rem;white-space:nowrap;min-height:4rem}
   .btn-grande .preco{font-size:1.35rem}
+  .hero-cta .cert{width:100%}
 }
 
 .ig{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;color:var(--caramelo-claro);text-decoration:none;font-weight:500}
 .ig svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5}
 .ig:hover{color:var(--marfim)}
+
+/* ===== EU VOU PARTICIPAR ===== */
+.euvou{padding:clamp(3rem,6vw,4.5rem) 0;background:var(--cafe);border-top:1px solid var(--linha)}
+.euvou .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem 3rem}
+.euvou h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:1.1;margin-top:.6rem}
+.euvou h2 em{font-style:normal;color:var(--caramelo)}
+.euvou p.txt{color:var(--marfim-2);margin-top:.6rem;max-width:34em}
+.euvou .btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6}
+@media (max-width:900px){ .euvou .btn{width:100%} }
 /* ===== DOR ===== */
 .dor{background:var(--cafe);padding:clamp(3.5rem,8vw,7rem) 0}
 .dor .pergunta{font-family:var(--serif);font-size:clamp(1.9rem,3.8vw,3.4rem);line-height:1.18;letter-spacing:-.01em;max-width:21em}
@@ -278,7 +290,7 @@ a{color:inherit}
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10" r="2.3"/></svg><span><b>e-Business</b>Av. Pau Brasil, Lote 6, Águas Claras</span></li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 3 8.5l9 4.5 9-4.5L12 4Z"/><path d="M7 11v4.5c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5V11"/></svg><span><b>Certificado</b>de participação</span></li>
           </ul>
-          <span class="cert">Com certificado de participação</span>
+          <span class="cert">Com certificado de participação<small>Entregue 8 horas após o workshop</small></span>
         </div>
       </div>
     </div>
@@ -347,7 +359,7 @@ a{color:inherit}
           <div><dt>Data</dt><dd data-c="dataLonga"></dd></div>
           <div><dt>Horário</dt><dd data-c="horario"></dd></div>
           <div><dt>Local</dt><dd><span data-c="local"></span><br><span data-c="endereco"></span><br><a id="mapa" href="#" target="_blank" rel="noopener">Ver no mapa</a></dd></div>
-          <div><dt>Inclui</dt><dd>Certificado de participação</dd></div>
+          <div><dt>Inclui</dt><dd>Certificado de participação<br><span class="obs">Entregue 8 horas após o workshop</span></dd></div>
         </dl>
         <p class="investimento"><small>Investimento</small><strong data-c="preco"></strong></p>
         <a class="btn btn-ouro js-pagar" href="#">Pagar inscrição <span class="preco" data-c="preco"></span></a>
@@ -355,6 +367,17 @@ a{color:inherit}
         <a class="btn btn-contorno js-whats btn-duvidas" href="#">Tirar dúvidas pelo WhatsApp</a>
         <p class="whats-num">ou ligue: <a id="tel" href="#" data-c="whatsappExibicao"></a></p>
       </div>
+    </div>
+  </section>
+
+  <section class="euvou" aria-labelledby="h-euvou">
+    <div class="wrap">
+      <div>
+        <p class="rotulo">Já garantiu sua vaga?</p>
+        <h2 id="h-euvou">Conte para todo mundo que <em>você vai</em></h2>
+        <p class="txt">Crie em segundos uma arte com a sua foto para postar no Instagram e marcar o @drkeybsb.</p>
+      </div>
+      <a class="btn btn-contorno" href="eu-vou-participar.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Eu vou participar</a>
     </div>
   </section>
 
